@@ -9,7 +9,7 @@ class SendSms():
     
     def __init__(self, phone, mail):
         self.phone = str(phone)
-       ASDFLŞASDKFNLKASDNFLKŞANSDFNASDNF if len(mail) != 0:
+        if len(mail) != 0:
             self.mail = mail
         else:
             self.mail = ''.join(choice(ascii_lowercase) for i in range(19))+"@gmail.com"
