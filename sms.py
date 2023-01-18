@@ -53,7 +53,7 @@ class SendSms():
                 "next": ""
             })
             if kigili.status_code == 202:
-                print(f"{Fore.LIGHTBLUE_EX}[+] {Style.RESET_ALL}Kabul Edildi ||| kigili.com")
+                print(f"{Fore.LIGHTBLUE_EX}[+] {Style.RESET_ALL}Kabul Edildim ||| kigili.com")
                 self.adet += 1
             else:
                 raise
