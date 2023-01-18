@@ -1,11 +1,6 @@
-import requests
-from random import choice
-from string import ascii_lowercase
-from colorama import Fore, Style
-from datetime import date
-
+iDFG
 class SendCall():
-    ad = choice((requests.get("https://gist.githubusercontent.com/tolgarecep/251c7fcde01f9ea0a8f3883243c360a5/raw/4707ba1a669b32632ced646e302551bbfd5a904e/tr-names.txt").text).splitlines())
+    ad = choice((requests.get("DFGthubusercontent.com/tolgarecep/251c7fcde01f9ea0a8f3883243c360a5/raw/4707ba1a669b32632ced646e302551bbfd5a904e/tr-names.txt").text).splitlines())
     soyad = choice((requests.get("https://gist.githubusercontent.com/emrekgn/493304c6445de15657b2/raw/5ff32a4b0baa4999748d69650754243fd0fd6ed9/soyisimler").text).splitlines()).lower()
     tarih =  date.today().strftime('%d-%m-%Y')
     adet = 0
@@ -26,12 +21,7 @@ class SendCall():
             r = requests.post(url, data=data, allow_redirects=False)
             if r.status_code == 302:
                 print(f"{Fore.LIGHTBLUE_EX}[+] {Style.RESET_ALL}Kabul Edildi ||| porsche.com.tr")
-                self.adet += 1
-            else:
-                raise 
-        except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Reddedildi ||| porsche.com.tr")
-            
+             DFG
     
     #pratikdepo.com
     def Pratik(self):
@@ -39,11 +29,7 @@ class SendCall():
             url = "https://www.pratikdepo.com:443/biz-sizi-arayalim-tesekkur"
             data = {"ad": self.ad, "telefon": self.phone, "email": self.mail, "onay": "1", "iletisim_arayalim": "ok", "source": ''}
             r = requests.post(url,  data=data)
-            if "Kaydınız alınmıştır." in r.text:
-                print(f"{Fore.LIGHTBLUE_EX}[+] {Style.RESET_ALL}Kabul Edildi ||| pratikdepo.com")
-                self.adet += 1
-            else:
-                raise 
+            ifDFG
         except:
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Reddedildi ||| pratikdepo.com")
         
@@ -61,12 +47,7 @@ class SendCall():
             else:
                 raise 
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Reddedildi ||| cinselterapi.info")
-
-
-    #otelz.com
-    def Otelz(self):
-        try:
+            printDG
             url = "https://www.otelz.com:443/api/v1/dynamic-forms"
             json={"callRequest": "0", "callRequestHour": "1", "content": "Acil!", "email": self.mail, "firstName": self.ad, "formType": "LetUsCallYou", "lastName": self.soyad, "phone": self.phone}
             r = requests.post(url, json=json)
@@ -79,12 +60,7 @@ class SendCall():
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Reddedildi ||| otelz.com")
             
             
-    #expressdekor.com
-    def Express(self):
-        try:
-            url = "https://www.expressdekor.com:443/wp-json/contact-form-7/v1/contact-forms/3484/feedback?_locale=user"
-            headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0", "Accept": "application/json, */*;q=0.1", "Accept-Language": "tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3", "Accept-Encoding": "gzip, deflate", "Referer": "https://www.expressdekor.com/sizi-arayalim/", "X-Wp-Nonce": "1894915dc7", "Content-Type": "multipart/form-data; boundary=---------------------------366167737039134484653049978932", "Origin": "https://www.expressdekor.com", "Dnt": "1", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin", "Te": "trailers"}
-            data = f"-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7\"\r\n\r\n3484\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_version\"\r\n\r\n5.4\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_locale\"\r\n\r\ntr_TR\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_unit_tag\"\r\n\r\nwpcf7-f3484-p3483-o1\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_container_post\"\r\n\r\n3483\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_posted_data_hash\"\r\n\r\n\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"your-name\"\r\n\r\n{self.ad} {self.soyad}\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"your-phone\"\r\n\r\n{self.phone}\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"your-message\"\r\n\r\nAcil!\r\n-----------------------------366167737039134484653049978932--\r\n".encode("utf-8")
+    #expressdekDFG-------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7\"\r\n\r\n3484\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_version\"\r\n\r\n5.4\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_locale\"\r\n\r\ntr_TR\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_unit_tag\"\r\n\r\nwpcf7-f3484-p3483-o1\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_container_post\"\r\n\r\n3483\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"_wpcf7_posted_data_hash\"\r\n\r\n\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"your-name\"\r\n\r\n{self.ad} {self.soyad}\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"your-phone\"\r\n\r\n{self.phone}\r\n-----------------------------366167737039134484653049978932\r\nContent-Disposition: form-data; name=\"your-message\"\r\n\r\nAcil!\r\n-----------------------------366167737039134484653049978932--\r\n".encode("utf-8")
             r = requests.post(url, headers=headers, data=data)
             if r.json()["message"] == 'Mesajınız için teşekkürler. Gönderildi.':
                 print(f"{Fore.LIGHTBLUE_EX}[+] {Style.RESET_ALL}Kabul Edildi ||| expressdekor.com")
@@ -93,19 +69,11 @@ class SendCall():
                 raise 
         except:
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Reddedildi ||| expressdekor.com")
-            
-    
-    #thepicktolight.com
-    def Thepick(self):
-        try:
-            url = "https://thepicktolight.com:443/wp-json/contact-form-7/v1/contact-forms/561/feedback"
+            DFG/thepicktolight.com:443/wp-json/contact-form-7/v1/contact-forms/561/feedback"
             headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0", "Accept": "application/json, */*;q=0.1", "Accept-Language": "tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3", "Accept-Encoding": "gzip, deflate", "Referer": "https://thepicktolight.com/siziarayalim/", "Content-Type": "multipart/form-data; boundary=---------------------------312483609613997599601843430130", "Origin": "https://thepicktolight.com", "Dnt": "1", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin", "Te": "trailers"}
             data = f"-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"_wpcf7\"\r\n\r\n561\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"_wpcf7_version\"\r\n\r\n5.6.3\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"_wpcf7_locale\"\r\n\r\nen_US\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"_wpcf7_unit_tag\"\r\n\r\nwpcf7-f561-p534-o1\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"_wpcf7_container_post\"\r\n\r\n534\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"_wpcf7_posted_data_hash\"\r\n\r\n\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"your-name\"\r\n\r\n{self.ad}\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"your-email\"\r\n\r\n{self.mail}\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"your-subject\"\r\n\r\nAcil\r\n-----------------------------312483609613997599601843430130\r\nContent-Disposition: form-data; name=\"your-message\"\r\n\r\nCok Acil!\r\n-----------------------------312483609613997599601843430130--\r\n"
             r = requests.post(url, headers=headers, data=data)
-            if r.json()["message"] == 'Thank you for your message. It has been sent.':
-                print(f"{Fore.LIGHTBLUE_EX}[+] {Style.RESET_ALL}Kabul Edildi ||| thepicktolight.com")
-                self.adet += 1
-            else:
+            if r.jDFG
                 raise 
         except:
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Reddedildi ||| thepicktolight.com")
@@ -114,8 +82,7 @@ class SendCall():
     #vajinismustedavimerkezi.net
     def Vajini(self):
         try:
-            url = "https://www.vajinismustedavimerkezi.net:443/sizi-arayalim"
-            headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8", "Accept-Language": "tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3", "Accept-Encoding": "gzip, deflate", "Content-Type": "application/x-www-form-urlencoded", "Origin": "https://www.vajinismustedavimerkezi.net", "Dnt": "1", "Referer": "https://www.vajinismustedavimerkezi.net/sizi-arayalim", "Upgrade-Insecure-Requests": "1", "Sec-Fetch-Dest": "document", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-User": "?1", "Te": "trailers"}
+            url = "DFG: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8", "Accept-Language": "tr-TR,tr;q=0.8,en-US;q=0.5,en;q=0.3", "Accept-Encoding": "gzip, deflate", "Content-Type": "application/x-www-form-urlencoded", "Origin": "https://www.vajinismustedavimerkezi.net", "Dnt": "1", "Referer": "https://www.vajinismustedavimerkezi.net/sizi-arayalim", "Upgrade-Insecure-Requests": "1", "Sec-Fetch-Dest": "document", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-User": "?1", "Te": "trailers"}
             data = {"name": self.ad, "email": self.mail, "emailid": "1,Telefon Numaran\xc4\xb1z,", "subject": "Acil", "message": "Cok Acil!!", "extra0": self.phone, "extravalues": f"#{self.phone}", "option": "com_alfcontact", "task": "sendemail", "emailto_id": "1", "34678c7059ce93f3539d11c789db1afe": "1"}
             r = requests.post(url, headers=headers, data=data, allow_redirects=False)
             if r.status_code == 303:
